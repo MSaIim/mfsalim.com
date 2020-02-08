@@ -59,22 +59,51 @@ h1 {
     text-transform: uppercase;
     font-family: 'Bungee Hairline', cursive;
     color: #ffffff;
+    margin-bottom: 10px;
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 /** ================================
  ** Lists
  ** ==============================*/
+ul.nav-list {
+    list-style: none;
+    margin-top: 50px;
+    padding: 0;
+}
+
+ul.nav-list button {
+    padding: 15px 30px 15px 30px;
+    text-transform: none;
+    font-size: 18px;
+    font-family: 'Coda', cursive;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    border-radius: 50px;
+}
+
+ul.nav-list li:nth-child(2) {
+    margin-left: 20px;
+}
+
+ul.nav-list button:hover {
+    background: rgb(14, 22, 34, 0.1);
+    color: #ffffff;
+}
+
 ul.social-list {
     list-style: none;
     margin-top: 100px;
     padding: 0;
 }
 
-ul.social-list li {
+ul.social-list li,
+ul.nav-list li {
     display: inline;
 }
 
@@ -121,6 +150,10 @@ ul.social-list li {
     .content {
         height: 400px;
     }
+
+    ul.nav-list button {
+        font-size: 16px;
+    }
 }
 
 /** ================================
@@ -132,11 +165,31 @@ ul.social-list li {
 }
 
 @keyframes bounce {
-    0%   { transform: scale(1,1)      translateY(0); }
-    10%  { transform: scale(1.1,.9)   translateY(0); }
-    30%  { transform: scale(.9,1.1)   translateY(-20px); }
-    50%  { transform: scale(1.05,.95) translateY(0); }
-    57%  { transform: scale(1,1)      translateY(-7px); }
-    64%  { transform: scale(1,1)      translateY(0); }
-    100% { transform: scale(1,1)      translateY(0); }
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    10% {
+        transform: scale(1.1, .9) translateY(0);
+    }
+
+    30% {
+        transform: scale(.9, 1.1) translateY(-20px);
+    }
+
+    50% {
+        transform: scale(1.05, .95) translateY(0);
+    }
+
+    57% {
+        transform: scale(1, 1) translateY(-7px);
+    }
+
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
 }
