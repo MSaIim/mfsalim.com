@@ -1,0 +1,142 @@
+@import url('normalize.css');
+
+/** ================================
+ ** Document
+ ** ==============================*/
+html,
+body {
+    width: 98%;
+    height: 98%;
+}
+
+body {
+    background-color: #0e1622;
+    background: url('../assets/background02.jpg') no-repeat center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    /* For IE9+ */
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/background02.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/background02.jpg', sizingMethod='scale')";
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/** ================================
+ ** Grouping
+ ** ==============================*/
+.content {
+    width: 90%;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    text-align: center;
+    z-index: 100;
+}
+
+/** ================================
+ ** Text
+ ** ==============================*/
+h1 {
+    font-size: 5em;
+    text-transform: uppercase;
+    font-family: 'Bungee Hairline', cursive;
+    color: #ffffff;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/** ================================
+ ** Lists
+ ** ==============================*/
+ul.social-list {
+    list-style: none;
+    margin-top: 100px;
+    padding: 0;
+}
+
+ul.social-list li {
+    display: inline;
+}
+
+.social-link {
+    display: inline-block;
+    background-image: url('../assets/social_media.png');
+    height: 58px;
+    background-size: 192px 58px;
+    text-indent: -9999px;
+    margin-left: 15px;
+    opacity: .5;
+    -webkit-transition: all .1s ease-in;
+}
+
+.social-link:hover {
+    opacity: 1;
+    animation: bounce .7s linear;
+}
+
+.social-link-github {
+    background-position: -193px 0;
+    width: 60px;
+    margin-left: 0;
+}
+
+.social-link-linkedin {
+    background-position: -67px 0;
+    width: 60px;
+}
+
+.social-link-email {
+    background-position: -132px 0;
+    width: 60px;
+}
+
+/** ================================
+ ** Media queries
+ ** ==============================*/
+@media (max-width: 700px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .content {
+        height: 400px;
+    }
+}
+
+/** ================================
+ ** Animations
+ ** ==============================*/
+.bounce {
+    animation-name: bounce;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-20px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
