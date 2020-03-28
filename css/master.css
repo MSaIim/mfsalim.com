@@ -11,15 +11,11 @@ body {
 
 body {
     background-color: #0e1622;
-    background: url('../assets/background02.jpg') no-repeat center fixed;
+    background: url('../assets/background01.jpg') no-repeat center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-
-    /* For IE9+ */
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/background02.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/background02.jpg', sizingMethod='scale')";
 }
 
 body::after {
